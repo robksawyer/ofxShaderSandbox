@@ -5,3 +5,5 @@
 
 # Resources
 - [tiagosr/ofxShadertoy](https://github.com/tiagosr/ofxShadertoy)
+- [GLSL Sandbox](http://glslsandbox.com/)
+- [ShaderToy](https://www.shadertoy.com/)
