@@ -5,7 +5,7 @@ void ofApp::setup(){
 	// Global Settings
 	ofSetLogLevel(OF_LOG_VERBOSE);
 	
-	show_fps = true;
+	showFPS = true;
 	bHideCursor = false;
 	
 	// FBO Kaleidoscope
@@ -35,36 +35,28 @@ void ofApp::draw(){
 	kScope.end( shaderBox.getResolution() );
 	
 	
-	if (show_fps == true){
-		ofFill();
-		ofSetColor(0,0,10,200);
-		ofDrawRectangle(0,0,300,190);
-		ofSetColor(180,180,180);
-		ofNoFill();
-		ofDrawRectangle(0,0,300,190);
-		ofSetColor(255,255,255);
-		ofDrawBitmapString("FPS: " + ofToString( ofGetFrameRate(), 2), 10, 1*15);
-		ofDrawBitmapString("Some shader use your mouse movement!", 10, 2*15);
-		ofDrawBitmapString("'f' Toggle Fullscreen.", 10, 3*15);
-		ofDrawBitmapString("'s' Toggle Show INFO.", 10, 4*15);
-		ofDrawBitmapString("'r' Change Resolution Divider: " + ofToString( shaderBox.getResolution() ), 10, 5 * 15);
-		ofDrawBitmapString("'h' Toggle hide Cursor.", 10, 12 * 15);
+	if (showFPS == true){
+		drawFPSControls();
 		
 		//Draw Kaleidoscope Controls
 		kScope.drawControls();
+		
 		//Draw ShaderBox Controls
 		shaderBox.drawControls();
 	}
+	
+	kScope.draw( shaderBox.getResolution(), shaderBox.resolVert, shaderBox.resolHoriz);
+	
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
 	switch (key){
 		case 's':
-			if (show_fps == true){
-				show_fps = false;
+			if (showFPS == true){
+				showFPS = false;
 			} else{
-				show_fps = true;
+				showFPS = true;
 			}
 			break;
 		case 'f':
@@ -133,4 +125,21 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+//--------------------------------------------------------------
+void ofApp::drawFPSControls(){
+	ofFill();
+	ofSetColor(0,0,10,200);
+	ofDrawRectangle(0,0,300,190);
+	ofSetColor(180,180,180);
+	ofNoFill();
+	ofDrawRectangle(0,0,300,190);
+	ofSetColor(255,255,255);
+	ofDrawBitmapString("FPS: " + ofToString( ofGetFrameRate(), 2), 10, 1*15);
+	ofDrawBitmapString("Some shader use your mouse movement!", 10, 2*15);
+	ofDrawBitmapString("'f' Toggle Fullscreen.", 10, 3*15);
+	ofDrawBitmapString("'s' Toggle Show INFO.", 10, 4*15);
+	ofDrawBitmapString("'r' Change Resolution Divider: " + ofToString( shaderBox.getResolution() ), 10, 5 * 15);
+	ofDrawBitmapString("'h' Toggle hide Cursor.", 10, 12 * 15);
 }

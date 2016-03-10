@@ -167,3 +167,7 @@ void Kaleidoscope::endB(){
 void Kaleidoscope::endC(){
 	fboKaleidoscopeC.end();
 }
+
+bool Kaleidoscope::showing(){
+	return bKaleidoscope;
+}

@@ -40,6 +40,7 @@ public:
 	float KaleidoscopeSlices;
 	
 	bool bKaleidoscope;
+	bool showing();
 
 };
 

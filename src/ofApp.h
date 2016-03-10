@@ -23,12 +23,16 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 	
+		void drawFPSControls();
+	
 		ShaderBox shaderBox;
 		Kaleidoscope kScope;
 	
 		// Global Settings
-		bool show_fps;
+		bool showFPS;
+	
 		bool bHideCursor;
+	
 				
 		int passes;
 };
