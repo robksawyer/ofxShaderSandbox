@@ -13,13 +13,39 @@ void ShaderBox::setup(){
 	useShaderToy = true;
 	usePingPong = false;
 	
-	
 	resolHoriz = 1024;
 	resolVert = 1024;
 	
+	loadFragFiles("frags/");
+	
+	resolution = 1;
+	
+	nFrag = 0;
+	
+	// now compile the first shader
+	bFine = true;
+	
+	fragmentShader = frags[nFrag];
+	ofLog(OF_LOG_NOTICE) << "Loading Shader" << fragmentShader;
+	
+	if(useShaderToy){
+		shadertoy.load("frags/" + fragNames[nFrag]);
+		ofSetFrameRate(60);
+		shadertoy.setAdvanceTime(true);
+	}
+	
+	if(usePingPong){
+		pingPong.allocate( resolHoriz, resolVert, GL_RGB);
+		pingPong.swap();
+		compileCode(fragmentShader);
+	}
+	
+}
+
+void ShaderBox::loadFragFiles(string path){
 	//Load the .frag files
 	ofDirectory dir;
-	dir.listDir("frags/");
+	dir.listDir(path);
 	int fragDirSize = dir.size();
 	cout << fragDirSize << endl;
 	for (int val = 0; val < fragDirSize; val++){
@@ -45,30 +71,7 @@ void ShaderBox::setup(){
 		fragNames.push_back(num.str());
 	}
 	
-//	ofLog(OF_LOG_NOTICE) << ofToString(fragNames);
-	
-	resolution = 1;
-	
-	nFrag = 0;
-	
-	// now compile the first shader
-	bFine = true;
-	
-	fragmentShader = frags[nFrag];
-	ofLog(OF_LOG_NOTICE) << "Loading Shader" << fragmentShader;
-	
-	if(useShaderToy){
-		shadertoy.load("frags/" + fragNames[nFrag]);
-		ofSetFrameRate(60);
-		shadertoy.setAdvanceTime(true);
-	}
-	
-	if(usePingPong){
-		pingPong.allocate( resolHoriz, resolVert, GL_RGB);
-		pingPong.swap();
-		compileCode(fragmentShader);
-	}
-	
+	//	ofLog(OF_LOG_NOTICE) << ofToString(fragNames);
 }
 
 void ShaderBox::draw(){

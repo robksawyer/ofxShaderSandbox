@@ -16,6 +16,7 @@
 class ShaderBox{
 public:
 	void setup();
+	void loadFragFiles(string path);
 	void draw();
 	void drawControls();
 	void update(int passes);
