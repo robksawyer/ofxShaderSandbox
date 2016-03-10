@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D13366EAB6BCA502121EFF039D6D2153FEDFACC7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "16B527AB1A671E940E62021176871FE88FBDE091" : 0,
+    "E00DDFE5777E148E1EF24D3D4C822CE587F248DD" : 0,
+    "D13366EAB6BCA502121EFF039D6D2153FEDFACC7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "544AC890-7286-4F4B-99CE-06F78561F3D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "16B527AB1A671E940E62021176871FE88FBDE091" : "..\/..\/addons\/ofxShadertoy",
+    "E00DDFE5777E148E1EF24D3D4C822CE587F248DD" : "..\/..\/addons\/ofxFPSControls",
+    "D13366EAB6BCA502121EFF039D6D2153FEDFACC7" : "ofxShaderSandbox\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ofxShaderSandbox",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ofxShaderSandbox.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tiagosr\/ofxShadertoy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "16B527AB1A671E940E62021176871FE88FBDE091"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/robksawyer\/ofxShaderSandbox.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D13366EAB6BCA502121EFF039D6D2153FEDFACC7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tiagosr\/ofxFPSControls",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E00DDFE5777E148E1EF24D3D4C822CE587F248DD"
+    }
+  ]
+}

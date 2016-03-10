@@ -1,3 +1,4 @@
+ofxFPSControls
 ofxGui
 ofxShadertoy
 ofxXmlSettings
